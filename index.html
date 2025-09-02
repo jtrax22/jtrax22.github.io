@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Traxler - Growth & Automation Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #f0f0f0;
+            background: #1a1a1a;
+            min-height: 100vh;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 24px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 50px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 24px;
+            display: block;
+            border: 3px solid #f7b9a1;;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #f7b9a1;;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .contact-info a {
+            color: #f7b9a1;;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #33e0ff;
+        }
+
+        .profile {
+            background: #242424;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            border: 1px solid #333;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #f7b9a1;;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+            letter-spacing: -0.01em;
+        }
+
+        .job {
+            background: #242424;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .job:hover {
+            transform: translateY(-2px);
+            border-color: #f7b9a1;;
+        }
+
+        .job-header {
+            margin-bottom: 16px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .job-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .company {
+            color: #f7b9a1;;
+            font-weight: 500;
+        }
+
+        .date {
+            color: #888;
+            background: rgba(136, 136, 136, 0.1);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+        }
+
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 16px;
+            text-align: left;
+        }
+
+        .job li {
+            margin-bottom: 10px;
+            color: #e0e0e0;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .job li:before {
+            content: "•";
+            color: #f7b9a1;;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+        }
+
+        .stat {
+            color: #f7b9a1;;
+            font-weight: 700;
+        }
+
+        .key-skill {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #333;
+            border: 1px solid #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #242424;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-2px);
+            border-color: #f7b9a1;;
+        }
+
+        .skill-category h3 {
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .skill-category p {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .skill-highlight {
+            color: #f7b9a1;;
+            font-weight: 600;
+        }
+
+        .education-content {
+            text-align: center;
+        }
+
+        .education-content ul {
+            text-align: center;
+        }
+
+        .education-content li {
+            padding-left: 0;
+        }
+
+        .education-content li:before {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .job-meta {
+                flex-direction: column;
+                gap: 6px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="James Traxler copy.png" alt="James Traxler" class="profile-image">
+            <h1>James Traxler</h1>
+            <div class="tagline">Growth Hacker • AI Automation Expert • Revenue Generator</div>
+            <div class="contact-info">
+                <span>📍 Scottsdale, AZ</span>
+                <span><a href="mailto:jtraxler18@gmail.com">📧 jtraxler18@gmail.com</a></span>
+                <span>📱 (480) 427-1970</span>
+                <span><a href="https://www.linkedin.com/in/james-traxler/" target="_blank">💼 LinkedIn</a></span>
+            </div>
+        </header>
+
+        <section class="profile">
+            I blend sales expertise, coding skills, and AI integration to generate measurable revenue. Proven track record driving <span class="stat">3× demo bookings</span> and replacing entire sales teams with smart automation.
+        </section>
+
+        <section class="section">
+            <h2>💼 Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Head of Growth</div>
+                    <div class="job-meta">
+                        <span class="company">Presspool</span>
+                        <span class="date">Dec 2023 - Present</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Scaled outreach, SEO, and social media through <span class="key-skill">automation</span>, replacing a <span class="stat">10-person sales team</span> targeting Cybersecurity CMOs</li>
+                    <li>Created <span class="key-skill">AI-powered lead magnets</span> connected to LLMs that generated <span class="stat">3× more demo bookings</span> on autopilot</li>
+                    <li>Built <span class="key-skill">Python data collection app</span> that identified <span class="stat">95% of cybersecurity thought leaders</span></li>
+                    <li>Managed team of <span class="stat">3 developers</span> for platform features and design</li>
+                </ul>
+                <div class="video-container">
+                    <div style="position: relative; padding-bottom: 64.62829736211032%; height: 0;">
+                        <iframe src="https://www.loom.com/embed/8cda11a013b245cca6e2481c1f25dea0?sid=a0726f5f-67f7-4850-9b1a-d9e614b4aa48" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Account Executive</div>
+                    <div class="job-meta">
+                        <span class="company">Barton Associates</span>
+                        <span class="date">Jul 2022 - Nov 2023</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Built relationships with <span class="key-skill">Chief Medical Officers</span> of hospitals</li>
+                    <li>Led office of <span class="stat">50 people in production</span> for 3 months out of 12</li>
+                    <li>Completed intensive <span class="key-skill">3-month sales training program</span></li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Entrepreneur/Web Developer</div>
+                    <div class="job-meta">
+                        <span class="date">2021 - Present</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="key-skill">MidiMind.AI Founder</span> - Built full-stack app converting natural language to MIDI using <span class="key-skill">Python, JavaScript, MySQL & OpenAI APIs</span></li>
+                    <li>Developed <span class="key-skill">automated pricing estimator</span> for athlete memorabilia, sold to industry professionals</li>
+                    <li>Created <span class="key-skill">cryptocurrency trading education app</span> with live market data integration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🛠️ Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Programming</h3>
+                    <p><span class="skill-highlight">Python, JavaScript</span>, HTML, CSS, MySQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>🚀 Marketing & Sales</h3>
+                    <p><span class="skill-highlight">Automation, SEO, AI Integration</span>, Meta/LinkedIn Ads, Analytics, Copywriting, UI/UX</p>
+                </div>
+                <div class="skill-category">
+                    <h3>🎨 Creative</h3>
+                    <p><span class="skill-highlight">Music Production</span> - 10 years Logic Pro experience</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎓 Education</h2>
+            <div class="job education-content">
+                <div class="job-header">
+                    <div class="job-title">Bachelor of Science, Information Science & Technology</div>
+                    <div class="job-meta">
+                        <span class="company">University of Arizona</span>
+                        <span class="date">2022</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Minor in <span class="key-skill">Business Administration</span></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
